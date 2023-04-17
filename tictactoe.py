@@ -87,8 +87,6 @@ class TicTacToe:
         while True:
             r, c = list(map(int, input("Введите координаты свободной клетки: ").split()))
             self.__index_validator((r, c))
-            if not (0 < r <= self._n) or not (0 < c <= self._n):
-                continue
             if self[r, c] == self.FREE_CELL:
                 self[r, c] = self.HUMAN_X
                 break
